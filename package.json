@@ -17,6 +17,7 @@
     "react-query": "^3.33.5"
   },
   "devDependencies": {
+    "@types/next": "^9.0.0",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "@vitejs/plugin-react": "^1.0.0",
