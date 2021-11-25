@@ -15,7 +15,7 @@ function TokenStatCard({ title, stats }: Props) {
 		<Box
 			as={Link}
 			isExternal
-			href={`#`}
+			href='https://www.dextools.io/app/ether/pair-explorer/0x7b12d855445073987d45ea97b1af3554f05e4ef4'
 			border='1px solid lightgray'
 			borderRadius='lg'
 			p='5'
