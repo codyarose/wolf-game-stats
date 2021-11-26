@@ -1,5 +1,5 @@
 import { useQuery, UseQueryOptions } from "react-query"
-import { WoolData } from "./types"
+import { WoolData } from "../types"
 
 function useWoolQuery(options?: UseQueryOptions<WoolData>) {
 	return useQuery<WoolData>(

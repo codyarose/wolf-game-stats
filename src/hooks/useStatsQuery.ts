@@ -1,5 +1,5 @@
 import { useQuery, UseQueryOptions } from "react-query"
-import { CollectionStats } from "./types"
+import { CollectionStats } from "../types"
 
 function useStatsQuery(
 	collection: string,

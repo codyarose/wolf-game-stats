@@ -11,8 +11,10 @@ import {
 
 import CollectionStatCard from "./CollectionStatCard"
 import TokenStatCard from "./TokenStatCard"
-import useStatsQuery from "./useStatsQuery"
-import useWoolQuery from "./useWoolQuery"
+import useStatsQuery from "./hooks/useStatsQuery"
+import useWoolQuery from "./hooks/useWoolQuery"
+import MetaMaskConnect from "./MetaMaskConnect"
+import MyWool from "./MyWool"
 
 function App() {
 	const { colorMode, toggleColorMode } = useColorMode()
@@ -27,6 +29,9 @@ function App() {
 
 	return (
 		<div>
+			<Box p={5} bg="#39e350" alignItems="flex-end" display="flex">
+				<MetaMaskConnect/>
+			</Box>
 			<Box as='header' py='5'>
 				<Container>
 					<Flex justifyContent='space-between'>
@@ -48,6 +53,9 @@ function App() {
 			<main>
 				<Container>
 					<Grid templateColumns='1fr' gap='6'>
+						<MyWool stats={ethTickerData}/>
+
+
 						<TokenStatCard title='$WOOL' stats={ethTickerData} />
 						<CollectionStatCard
 							title='Wolf Game'
