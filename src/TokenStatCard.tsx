@@ -1,6 +1,6 @@
 import { Box, Heading, Link } from "@chakra-ui/react"
-import { Stat, StatGroup, StatLabel, StatNumber } from "@chakra-ui/stat"
-import React from "react"
+import { StatGroup } from "@chakra-ui/stat"
+import StatItem from './StatItem';
 import { Ticker } from "./types"
 
 const EMPTY = "--"
@@ -36,17 +36,4 @@ function TokenStatCard({ title, stats }: Props) {
 
 export default TokenStatCard
 
-function StatItem({
-	label,
-	children,
-}: {
-	label: string
-	children: React.ReactNode
-}) {
-	return (
-		<Stat flexBasis={["50%", "50%", "0%"]}>
-			<StatLabel opacity='0.75'>{label}</StatLabel>
-			<StatNumber fontSize='xl'>{children}</StatNumber>
-		</Stat>
-	)
-}
+
