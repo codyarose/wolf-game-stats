@@ -19,14 +19,8 @@ export const useContract = (contractAddress: string, contractAbi: any) => {
       contract = new ethers.Contract(contractAddress, contractAbi, signer);
     } else {
       // Otherwise there is no signer, only allowed to do public queries
-      const provider = new ethers.providers.JsonRpcProvider(
-        ETH_NETWORK_URL
-      );
-      contract = new ethers.Contract(
-        contractAddress,
-        contractAbi,
-        provider
-      );
+      const provider = new ethers.providers.JsonRpcProvider(ETH_NETWORK_URL);
+      contract = new ethers.Contract(contractAddress, contractAbi, provider);
     }
     return contract;
   }, [currentAccount, wrongChain]);
