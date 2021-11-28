@@ -20,6 +20,7 @@ function App() {
 	const { colorMode, toggleColorMode } = useColorMode()
 	const { data: woolData } = useWoolQuery()
 	const { data: wolfGame } = useStatsQuery("wolf-game")
+	const { data: wolfGameMigrated } = useStatsQuery("wolf-game-migrated")
 	const { data: wolfGameLand } = useStatsQuery("wolf-game-land")
 	const { data: wolfGameFarmer } = useStatsQuery("wolf-game-farmer")
 
@@ -61,6 +62,11 @@ function App() {
 							title='Wolf Game'
 							collection='wolf-game'
 							stats={wolfGame?.stats}
+						/>
+						<CollectionStatCard
+							title='Wolf Game Migrated'
+							collection='wolf-game-migrated'
+							stats={wolfGameMigrated?.stats}
 						/>
 						<CollectionStatCard
 							title='Land'
